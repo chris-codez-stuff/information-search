@@ -1,0 +1,4 @@
+sounddevice==0.4.7
+wavio==0.0.9
+SpeechRecognition==3.10.4
+Selenium==4.22.0
