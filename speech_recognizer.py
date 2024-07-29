@@ -4,11 +4,9 @@ import speech_recognition as sr
 
 
 def record_audio(filename, duration, fs):
-    print("Recording...")
     recording = sd.rec(int(duration * fs), samplerate=fs, channels=1, dtype='int16')
     sd.wait()
     wavio.write(filename, recording, fs, sampwidth=2)
-    print("Recording complete")
 
 
 def recognize_speech_from_audio(filename):

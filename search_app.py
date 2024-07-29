@@ -37,7 +37,7 @@ class VoiceSearchApp:
         self.label_wikipedia = tk.Label(self.main_frame, text="• Wikipedia", font=("Helvetica", 16))
         self.label_wikipedia.pack(anchor="w", padx=40)
 
-        self.label_instruction = tk.Label(self.main_frame, text="Speak what you need", font=("Helvetica", 16))
+        self.label_instruction = tk.Label(self.main_frame, text="Click record, and choose from above ☝️", font=("Helvetica", 16))
         self.label_instruction.pack(pady=(20, 10))
 
         self.record_button = tk.Button(self.main_frame, text="Record", font=("Helvetica", 16, "bold"),
@@ -86,7 +86,7 @@ class VoiceSearchApp:
 
     def record_search(self):
         start = messagebox.askquestion(self.search_engine.capitalize(),
-                                       f"What would you like to search in {self.search_engine.capitalize()}? Shall I start recording?")
+                                       f"What would you like to search in {self.search_engine.capitalize()}? Click to start recording?")
 
         if start == "yes":
             sr.record_audio(filename, duration, fs)
